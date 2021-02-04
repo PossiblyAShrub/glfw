@@ -134,7 +134,7 @@ if (CMAKE_C_COMPILER_ID STREQUAL "GNU" OR
     CMAKE_C_COMPILER_ID STREQUAL "Clang" OR
     CMAKE_C_COMPILER_ID STREQUAL "AppleClang")
 
-    if (CMAKE_C_SIMULATE_ID STREQUAL "MSVC")
+    if (CMAKE_C_COMPILER_FRONTEND_VARIANT STREQUAL "MSVC")
         # Tell Clang-CL that this is a Clang flag
         target_compile_options(glfw PRIVATE "/clang:-Wall")
     else()
